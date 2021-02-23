@@ -53,6 +53,7 @@ public class GamePlay : MonoBehaviour
 
     public void FoundTissue()
     {
+        RefHolder.instance.audioController.Play(RefHolder.instance.audioController.Tap, false);
         omgText.SetActive(false);
         tissueText.SetActive(true);
         tissue.SetActive(false);
@@ -61,6 +62,7 @@ public class GamePlay : MonoBehaviour
 
     public void CleanIce()
     {
+        RefHolder.instance.audioController.Play(RefHolder.instance.audioController.Tap, false);
         tissueText.SetActive(false);
         iceCream.SetActive(false);
         cleanText.SetActive(true);
@@ -71,6 +73,7 @@ public class GamePlay : MonoBehaviour
 
     public void DustbinFound()
     {
+        RefHolder.instance.audioController.Play(RefHolder.instance.audioController.Tap, false);
         cleanText.SetActive(false);
         dustbin.SetActive(false);
         truckText.SetActive(true);
@@ -80,6 +83,7 @@ public class GamePlay : MonoBehaviour
 
     public void TruckFound()
     {
+        RefHolder.instance.audioController.Play(RefHolder.instance.audioController.Tap, false);
         truckText.SetActive(false);
         doneText.SetActive(true);
         truck.SetActive(false);

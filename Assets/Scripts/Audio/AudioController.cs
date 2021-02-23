@@ -35,7 +35,10 @@ public class AudioController : MonoBehaviour
         }
     }
 
-    
+    private void Start()
+    {
+        Play(GameMusic, true);
+    }
 
     public void Play(string name)
     {
